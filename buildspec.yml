@@ -20,7 +20,8 @@ phases:
 
   post_build:
     commands:
-      - cdk deploy --context stack=A --require-approval never
+      - cdk destroy --force --all --context stack=A --require-approval never
+      # - cdk deploy --context stack=A --require-approval never
 
 artifacts:
   files:
