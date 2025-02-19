@@ -20,7 +20,7 @@ phases:
 
   post_build:
     commands:
-      - cdk deploy --context stack=V --require-approval never
+      - cdk deploy --context stack=A --require-approval never
 
 artifacts:
   files:
