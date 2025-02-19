@@ -154,7 +154,8 @@ export class WordpressAppStack extends cdk.Stack {
      * and EC2 security group. The template is then used by the AutoScalingGroup.
      */
     const ec2LaunchTemplate = new ec2.CfnLaunchTemplate(this, 'EC2LaunchTemplate', {
-      launchTemplateName: 'Wordpress-Launch-Template',
+      // launchTemplateName: 'Wordpress-Launch-Template',
+      launchTemplateName: cdk.PhysicalName.GENERATE_IF_NEEDED,
       versionDescription: 'v1',
       launchTemplateData: {
         instanceType: 't2.micro',
